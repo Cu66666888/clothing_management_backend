@@ -1,7 +1,7 @@
 from django.urls import path
-from core import views
+from core.views import UserRegistrationView, UserLoginView
 
 urlpatterns = [
-    path('register/', views.UserRegistrationView.as_view(), name='user_register'),
-    path('login/', views.UserLoginView.as_view(), name='user_login'),
+    path('register/', UserRegistrationView.as_view(), name='user_register'),  # 注册用户的 URL
+    path('login/', UserLoginView.as_view(), name='user_login'),  # 登录用户的 URL
 ]
